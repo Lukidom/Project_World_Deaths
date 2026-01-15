@@ -35,6 +35,8 @@ def group_by_code(recent_data, top_n=15):
     )
     return totals
 
+# 3 function
+'''Get total deaths by year'''
 def group_by_year(recent_data):
     totals = (recent_data.groupby("Year")["Total Deaths"] # Group by year
         .sum()
@@ -44,7 +46,7 @@ def group_by_year(recent_data):
     return totals
 
     
-# 3 function
+# 4 function
 '''Read and analyze deaths data from CSV file.'''
 def print_file_general(csv_path):
 
@@ -100,6 +102,9 @@ def print_file_general(csv_path):
     print(totals_by_year)
     plot_deaths_by_year(totals_by_year) # Plot total deaths by year
 
+
+    # 5 function
+'''Plot total deaths by country code'''
 def plot_deaths(top_by_code):# Plot total deaths by country code
     # Error handling: Validate data before plotting
     if top_by_code.empty:
@@ -125,6 +130,9 @@ def plot_deaths(top_by_code):# Plot total deaths by country code
         print(f"ERROR: Failed to create plot: {e}")
         return
 
+
+    # 6 function
+'''Plot total deaths by year'''
 def plot_deaths_by_year(totals_by_year):# Plot total deaths by year
     
     time.sleep(5)  # Pause for 1 second before plotting
@@ -153,7 +161,7 @@ def plot_deaths_by_year(totals_by_year):# Plot total deaths by year
         print(f"ERROR: Failed to create plot: {e}")
         return
 
-# 4 main function
+# main function
     """Main function to load and process deaths data."""
 def main():
     csv_path = Path(__file__).parent / "deaths_of_world.csv" # Path to CSV file
