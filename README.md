@@ -6,6 +6,8 @@ A Python program that tracks and plots global deaths over a 10-year period (2010
 
 This program (`deaths_of_world.py`) reads data from a CSV file (`deaths_of_world.csv`), validates the data, filters and sorts it, and creates visualizations to answer key questions about global mortality trends.
 
+[Youtube](https://youtu.be/AWnDecfO5KM)
+
 ### Questions Answered
 
 1. **What countries have the highest death rates?**

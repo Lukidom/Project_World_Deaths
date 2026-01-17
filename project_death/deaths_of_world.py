@@ -102,8 +102,7 @@ def print_file_general(csv_path):
     print(totals_by_year)
     plot_deaths_by_year(totals_by_year) # Plot total deaths by year
 
-
-    # 5 function
+# 5 function
 '''Plot total deaths by country code'''
 def plot_deaths(top_by_code):# Plot total deaths by country code
     # Error handling: Validate data before plotting
@@ -130,8 +129,7 @@ def plot_deaths(top_by_code):# Plot total deaths by country code
         print(f"ERROR: Failed to create plot: {e}")
         return
 
-
-    # 6 function
+# 6 function
 '''Plot total deaths by year'''
 def plot_deaths_by_year(totals_by_year):# Plot total deaths by year
     
@@ -162,7 +160,7 @@ def plot_deaths_by_year(totals_by_year):# Plot total deaths by year
         return
 
 # main function
-    """Main function to load and process deaths data."""
+"""Main function to load and process deaths data."""
 def main():
     csv_path = Path(__file__).parent / "deaths_of_world.csv" # Path to CSV file
     if not csv_path.exists():
@@ -170,6 +168,7 @@ def main():
         sys.exit(1)
     print_file_general(csv_path)
 
-
 if __name__ == "__main__":
     main()
+
+
